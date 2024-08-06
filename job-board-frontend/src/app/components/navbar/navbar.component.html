@@ -1,0 +1,31 @@
+<nav>
+  <div class="nav-container">
+    <div class="nav-container__nav-wrapper">
+      <div class="nav-container__nav-wrapper__logo">
+        <a href=""
+          ><img class="nav-logo" src="/logo.svg" alt="audiophile logo"
+        /></a>
+      </div>
+      <div class="nav-container__nav-wrapper__menu">
+        <ul>
+          <li class="nav-link"><a routerLink="">Home</a></li>
+          <li class="nav-link">
+            <a>Job List</a>
+          </li>
+          <li class="nav-link">
+            <a>Companies</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-container__nav-wrapper__nav-hamburger">
+        <button (click)="openMenu()" class="hamburger-button"></button>
+        <div
+          class="nav-container__nav-wrapper__nav-hamburger__mobile-container"
+        >
+          <app-mobile-menu *ngIf="showMenu"></app-mobile-menu>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<div (click)="openMenu()" *ngIf="showMenu" class="backdrop"></div>

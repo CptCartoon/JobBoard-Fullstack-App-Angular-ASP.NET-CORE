@@ -1,0 +1,214 @@
+@import "../public/variables.scss";
+
+* {
+  font-family: "Lato", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+body {
+  background-color: #f9f9f9;
+}
+
+// ### TEXT CLASSES
+
+.h1 {
+  font-size: 56px;
+  font-weight: bold;
+  line-height: 58px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $black;
+}
+
+.h2 {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 44px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: $black;
+}
+
+.h3 {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 36px;
+  letter-spacing: 1.15px;
+  text-transform: uppercase;
+  color: $black;
+}
+
+.h4 {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 38px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $black;
+}
+
+.h5 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 33px;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+  color: $black;
+}
+
+.h6 {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  color: $black;
+}
+
+.overline {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 19px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  color: $mainBlue;
+}
+
+.subtitle {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $mainBlue;
+}
+
+.bodytext {
+  font-size: 15px;
+  font-weight: medium;
+  line-height: 25px;
+  color: $black;
+}
+
+// ### BUTTON CLASSES
+
+// ### FORMS ELEMENTS
+
+.input {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 17px 24px;
+  letter-spacing: -0.25px;
+  outline: unset;
+  border: 2px solid #cfcfcf;
+  border-radius: 8px;
+  color: $black;
+  transition: 0.2s;
+
+  &::placeholder {
+    color: #999999;
+  }
+
+  &:focus {
+    border: 2px solid $mainBlue;
+  }
+
+  &:user-invalid {
+    border: 2px solid #cd2c2c;
+  }
+}
+
+/* The container */
+.label-radio {
+  display: block;
+  border: 2px solid #cfcfcf;
+  border-radius: 8px;
+  padding: 17px 24px 17px 61px;
+  position: relative;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: 0.2s;
+
+  &:hover {
+    border-color: $mainBlue;
+  }
+}
+
+/* Hide the browser's default radio button */
+.label-radio .input-radio {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.radio-checkmark {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 24px;
+  height: 20px;
+  width: 20px;
+  background-color: unset;
+  border-radius: 50%;
+  border: 1px solid #cfcfcf;
+  transition: 0.2s;
+}
+
+/* On mouse-over, add a grey background color */
+.label-radio:hover .input-radio ~ .radio-checkmark {
+  border: 1px solid $mainBlue;
+}
+
+/* When the radio button is checked, add a blue background */
+.label-radio:has(.input-radio:checked) {
+  border-color: $mainBlue;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.label-radio .input-radio:checked ~ .radio-checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.label-radio .radio-checkmark:after {
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: $mainBlue;
+}

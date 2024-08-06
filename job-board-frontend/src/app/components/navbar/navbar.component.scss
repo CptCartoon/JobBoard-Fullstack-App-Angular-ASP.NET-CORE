@@ -1,0 +1,130 @@
+@import "../../../../public/variables.scss";
+
+nav {
+  margin: auto;
+  padding: 0rem 2rem;
+  background-color: white;
+  -webkit-box-shadow: 0px 2px 80px -23px rgba(0, 0, 0, 0.226);
+  -moz-box-shadow: 0px 2px 80px -23px rgba(0, 0, 0, 0.226);
+  box-shadow: 0px 2px 80px -23px rgba(0, 0, 0, 0.226);
+}
+
+.nav-container {
+  max-width: 1440px;
+  margin: auto;
+  &__nav-wrapper {
+    display: flex;
+    padding: 32px 0 30px 0;
+    justify-content: flex-start;
+
+    &__logo {
+      margin-right: 3rem;
+    }
+
+    &__nav-hamburger {
+      display: none;
+
+      &__mobile-container {
+        position: relative;
+        app-mobile-menu {
+          position: absolute;
+          z-index: 5;
+          top: 55px;
+          left: 0;
+        }
+      }
+    }
+
+    &__menu {
+      max-width: 427px;
+      // display: flex;
+      // align-items: center;
+
+      ul {
+        display: flex;
+        flex-direction: row;
+
+        .nav-link {
+          list-style-type: none;
+          justify-content: space-between;
+          align-items: center;
+
+          a {
+            color: $greyishBlue;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-right: 2rem;
+            transition: 0.2s;
+
+            &:hover {
+              cursor: pointer;
+              color: $mainBlue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.product-nav {
+  background-color: $black;
+  border-bottom: unset;
+}
+
+@media screen and (max-width: 690px) {
+  .nav-container {
+    &__nav-wrapper {
+      justify-content: space-between;
+      &__nav-hamburger {
+        display: block;
+        .hamburger-button {
+          background-image: url("../../../../public/icons/hamburger.svg");
+          background-position: center;
+          background-repeat: no-repeat;
+          width: 24px;
+          height: 24px;
+          background-color: unset;
+          border: unset;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+
+      &__menu {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .nav-container {
+    &__nav-wrapper {
+      &__nav-hamburger {
+        &__mobile-container {
+          position: static;
+          app-mobile-menu {
+            position: absolute;
+            z-index: 1000;
+            left: 0;
+            right: 0;
+            top: 96px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.backdrop {
+  position: absolute;
+  z-index: 2;
+  background-color: black;
+  opacity: 0.4;
+  width: 100%;
+  height: calc(100% - 94px);
+}
