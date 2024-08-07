@@ -6,7 +6,10 @@
           ><img class="nav-logo" src="/logo.svg" alt="audiophile logo"
         /></a>
       </div>
-      <div class="nav-container__nav-wrapper__menu">
+      <div
+        class="nav-container__nav-wrapper__menu"
+        [ngClass]="{ 'display-block': showMenu }"
+      >
         <ul>
           <li class="nav-link"><a routerLink="">Home</a></li>
           <li class="nav-link">
@@ -16,13 +19,17 @@
             <a>Companies</a>
           </li>
         </ul>
+        <div class="nav-container__nav-wrapper__menu__user-buttons">
+          <app-btn btnLabel="Register" className="btn-no-outline"></app-btn>
+          <app-btn btnLabel="Sign in" className="btn-outline"></app-btn>
+        </div>
       </div>
       <div class="nav-container__nav-wrapper__nav-hamburger">
         <button (click)="openMenu()" class="hamburger-button"></button>
         <div
           class="nav-container__nav-wrapper__nav-hamburger__mobile-container"
         >
-          <app-mobile-menu *ngIf="showMenu"></app-mobile-menu>
+          <!-- <app-mobile-menu *ngIf="showMenu"></app-mobile-menu> -->
         </div>
       </div>
     </div>

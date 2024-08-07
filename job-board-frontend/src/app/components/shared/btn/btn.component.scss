@@ -1,0 +1,39 @@
+@import "../../../../../public/variables.scss";
+
+.btn {
+  display: inline-block;
+  background-color: unset;
+  border: unset;
+  outline: unset;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+}
+
+.btn-outline {
+  font-weight: 600;
+  padding: 11px 12px 12px 12px;
+  width: 165px;
+  border: 1px solid $mainBlue;
+  border-radius: 50px;
+  transition: 0.2s;
+  color: $mainBlue;
+  &:hover {
+    cursor: pointer;
+    background-color: $mainBlue;
+    color: white;
+  }
+}
+
+.btn-no-outline {
+  font-weight: 600;
+  padding: 11px 12px 12px 12px;
+  width: 165px;
+  border: 1px solid white;
+  border-radius: 50px;
+  transition: 0.2s;
+  color: $greyishBlue;
+  &:hover {
+    cursor: pointer;
+    background-color: $lightGrey;
+  }
+}
