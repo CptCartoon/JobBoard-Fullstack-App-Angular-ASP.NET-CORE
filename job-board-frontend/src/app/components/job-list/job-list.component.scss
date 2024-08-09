@@ -1,0 +1,35 @@
+@import "../../../../public/variables.scss";
+
+.job-list-container {
+  max-height: 600px;
+  overflow-y: scroll;
+
+  /* width */
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: $lightGrey;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $mainBlue;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  &__wrapper {
+    app-job-item {
+      display: block;
+      margin-bottom: 1rem;
+    }
+  }
+}
