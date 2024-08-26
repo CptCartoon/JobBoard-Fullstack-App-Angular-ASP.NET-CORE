@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "/GWrwdHHNZx0W+aH5TvpL7+TLKS6FAVZnFz+EAJXvZc=",
+  "Source": "JobBoardBackend",
+  "BasePath": "_content/JobBoardBackend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

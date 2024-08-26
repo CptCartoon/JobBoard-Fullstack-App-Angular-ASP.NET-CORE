@@ -1,0 +1,6 @@
+@JobBoardBackend_HostAddress = http://localhost:5090
+
+GET {{JobBoardBackend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
