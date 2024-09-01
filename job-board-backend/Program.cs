@@ -1,6 +1,6 @@
 
-using NLog.Extensions.Logging;
-using NLog.Web;
+using JobBoardBackend.Entities;
+using JobBoardBackend.Services;
 
 namespace JobBoardBackend
 {
@@ -13,19 +13,15 @@ namespace JobBoardBackend
             // Add services to the container.
 
             builder.Services.AddControllers();
+            builder.Services.AddDbContext<AuthorizationDbContext>();
+            builder.Services.AddAutoMapper(typeof(Program).Assembly);
+            builder.Services.AddScoped<IAccountService, AccountService>();
+
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-
-            //Configure the NLog
-
-            builder.Services.AddLogging(logginngBuilders =>
-            {
-                logginngBuilders.ClearProviders();
-                logginngBuilders.AddNLogWeb();
-            });
 
             var app = builder.Build();
 
