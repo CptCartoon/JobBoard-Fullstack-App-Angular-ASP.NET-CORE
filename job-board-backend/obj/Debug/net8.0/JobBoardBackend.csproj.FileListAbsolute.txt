@@ -138,3 +138,7 @@ E:\Programowanie\JobBoard Backend\JobBoardBackend\JobBoardBackend\obj\Debug\net8
 E:\Programowanie\JobBoard Backend\JobBoardBackend\JobBoardBackend\obj\Debug\net8.0\JobBoardBackend.pdb
 E:\Programowanie\JobBoard Backend\JobBoardBackend\JobBoardBackend\obj\Debug\net8.0\JobBoardBackend.genruntimeconfig.cache
 E:\Programowanie\JobBoard Backend\JobBoardBackend\JobBoardBackend\obj\Debug\net8.0\ref\JobBoardBackend.dll
+E:\Programowanie\JobBoard Backend\JobBoardBackend\JobBoardBackend\bin\Debug\net8.0\FluentValidation.dll
+E:\Programowanie\JobBoard Backend\JobBoardBackend\JobBoardBackend\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+E:\Programowanie\JobBoard Backend\JobBoardBackend\JobBoardBackend\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+E:\Programowanie\JobBoard Backend\JobBoardBackend\JobBoardBackend\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

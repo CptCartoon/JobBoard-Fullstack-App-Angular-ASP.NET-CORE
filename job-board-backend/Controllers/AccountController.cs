@@ -31,6 +31,14 @@ namespace JobBoardBackend.Controllers
             return Ok();
 
         }
+
+        [HttpPost("login")] 
+        public ActionResult Login([FromBody] LoginDto dto)
+        {
+            var token = _accountService.GenerateJwt(dto);
+
+            return Ok(token);
+        }
     }
 
 
