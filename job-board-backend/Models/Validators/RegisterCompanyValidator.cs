@@ -6,7 +6,7 @@ namespace JobBoardBackend.Models.Validators
 {
     public class RegisterCompanyValidator : AbstractValidator<RegisterCompanyDto>
     {
-        public RegisterCompanyValidator(AuthorizationDbContext dbContext) {
+        public RegisterCompanyValidator(JobBoardDbContext dbContext) {
             RuleFor(x => x.Email)
             .NotEmpty()
             .EmailAddress();

@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace JobBoardBackend.Migrations
 {
-    [DbContext(typeof(AuthorizationDbContext))]
+    [DbContext(typeof(JobBoardDbContext))]
     partial class AuthorizationDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

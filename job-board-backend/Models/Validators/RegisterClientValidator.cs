@@ -5,7 +5,7 @@ namespace JobBoardBackend.Models.Validators
 {
     public class RegisterClientValidator : AbstractValidator<RegisterClientDto>
     {
-        public RegisterClientValidator(AuthorizationDbContext dbContext) 
+        public RegisterClientValidator(JobBoardDbContext dbContext) 
         {
             RuleFor(x => x.Email)
                 .NotEmpty()

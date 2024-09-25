@@ -1,4 +1,4 @@
-﻿namespace JobBoardBackend.Entities
+﻿namespace JobBoardBackend.Entities.AuthEntities
 {
     public class Company
     {

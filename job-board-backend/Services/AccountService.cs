@@ -1,4 +1,5 @@
 ﻿using JobBoardBackend.Entities;
+using JobBoardBackend.Entities.AuthEntities;
 using JobBoardBackend.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -8,7 +9,7 @@ using System.Security.Claims;
 using System.Text;
 
 namespace JobBoardBackend.Services
-{ 
+{
     public interface IAccountService
     {
         void RegisterClient(RegisterClientDto dto);
@@ -17,10 +18,10 @@ namespace JobBoardBackend.Services
     }
     public class AccountService : IAccountService
     {
-        private readonly AuthorizationDbContext _context;
+        private readonly JobBoardDbContext _context;
         private readonly IPasswordHasher<UserLogin> _passwordHasher;
         private readonly AuthenticationSettings _authSettings;
-        public AccountService(AuthorizationDbContext context, IPasswordHasher<UserLogin> passwordHasher, AuthenticationSettings authSettings) {
+        public AccountService(JobBoardDbContext context, IPasswordHasher<UserLogin> passwordHasher, AuthenticationSettings authSettings) {
             _context = context;
             _passwordHasher = passwordHasher;
             _authSettings = authSettings;

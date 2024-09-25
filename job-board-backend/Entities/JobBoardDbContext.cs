@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using JobBoardBackend.Entities.AuthEntities;
+using Microsoft.EntityFrameworkCore;
 
 namespace JobBoardBackend.Entities
 {
-    public class AuthorizationDbContext : DbContext
+    public class JobBoardDbContext : DbContext
     {
         private readonly string _connectionString = "Data Source=DESKTOP-NJUV7II\\SQLEXPRESS;Initial Catalog=JobBoardDB;Integrated Security=True;Trust Server Certificate=True";
         public DbSet<Client> Clients { get; set; }

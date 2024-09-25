@@ -8,6 +8,7 @@ using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using JobBoardBackend.Entities.AuthEntities;
 
 namespace JobBoardBackend
 {
@@ -42,9 +43,10 @@ namespace JobBoardBackend
             // Add services to the container.
 
             builder.Services.AddControllers().AddFluentValidation();
-            builder.Services.AddDbContext<AuthorizationDbContext>();
+            builder.Services.AddDbContext<JobBoardDbContext>();
             builder.Services.AddAutoMapper(typeof(Program).Assembly);
             builder.Services.AddScoped<IAccountService, AccountService>();
+            builder.Services.AddScoped<ICompanyUtilsService, CompanyUtilsService>();
             builder.Services.AddScoped<IPasswordHasher<UserLogin>, PasswordHasher<UserLogin>>();
             builder.Services.AddScoped<IValidator<RegisterClientDto>, RegisterClientValidator>();
             builder.Services.AddScoped<IValidator<RegisterCompanyDto>, RegisterCompanyValidator>();

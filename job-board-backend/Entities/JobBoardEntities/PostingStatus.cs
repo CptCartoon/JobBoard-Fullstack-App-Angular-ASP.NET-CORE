@@ -1,6 +1,6 @@
-﻿namespace JobBoardBackend.Entities
+﻿namespace JobBoardBackend.Entities.JobBoardEntities
 {
-    public class Role
+    public class PostingStatus
     {
         public int Id { get; set; }
         public string Name { get; set; }

@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace JobBoardBackend.Migrations
 {
-    [DbContext(typeof(AuthorizationDbContext))]
+    [DbContext(typeof(JobBoardDbContext))]
     [Migration("20240901182649_auth")]
     partial class auth
     {
